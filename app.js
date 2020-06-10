@@ -58,12 +58,23 @@ const vm = new Vue({
             console.log("AAA");
 
             this.carrinho.splice(index, 1)
+        },
+        checarLocalStorage() {
+            if (window.localStorage.carrinho) {
+                this.carrinho = JSON.parse(window.localStorage.carrinho)
+            }
         }
 
 
     },
+    watch: {
+        carrinho() {
+            window.localStorage.carrinho = JSON.stringify(this.carrinho)
+        }
+    },
     created() {
         this.puxarProdutos()
+        this.checarLocalStorage()
     }
 
 
