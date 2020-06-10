@@ -284,7 +284,6 @@ body {
     margin-right: 50px;
     margin-bottom: 20px;
     padding: 10px 40px 10px 0;
-    
     border-bottom: 1px solid #000;
 }
 .carrinho-finalizar {
@@ -309,4 +308,66 @@ body {
     right: -15px;
     cursor: pointer;
     box-shadow: 0 3px 4px rgba(0, 0, 0, .1), 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+@media screen and (max-width: 900px) {
+
+    #app {
+        padding: 0 10px;
+    }
+    .produtos {
+        margin-top: 40px;
+    }
+    .produto{
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 300px;
+        margin: 30px auto;
+    }
+
+    .produto-info {
+        padding: 20px;
+    }
+
+    .produto-img {
+        max-width: 100%;
+    }
+
+    .produto-titulo {
+        font-size: 1.5rem;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-container {
+        grid-gap: 20px;
+        background: #fff;
+        padding: 10px 0;
+    }
+
+    .modal-img {
+        grid-row: 2;
+    }
+
+    .modal-img img{
+        width: 100%;
+        max-width: initial;
+    }
+
+    .modal-dados{
+        grid-column: 1;
+        padding: 10px;
+    }
+
+    .modal-btn{
+        margin-top: 20px;
+    }
+
+    .avaliacoes {
+        grid-column: 1;
+        padding: 10px;
+    }
+
 }
